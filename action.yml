@@ -1,12 +1,6 @@
 name: 'Infracost action'
 description: 'Echoing the first input action'
 
-outputs:
-  cost:
-    description: 'Infracost estimation'
-
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.terraform-root-dir }}
