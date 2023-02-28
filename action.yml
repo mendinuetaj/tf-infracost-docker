@@ -6,10 +6,6 @@ inputs:
     description: 'Directory where all terraform code resides'
     required: true
 
-  infracost-api-key:
-    description: 'Infracost API key'
-    required: true
-
 outputs:
   cost:
     description: 'Infracost estimation'
@@ -19,4 +15,3 @@ runs:
   image: 'Dockerfile'
   args:
     - -v ${{ inputs.terraform-root-dir }}:/code/:ro
-    - ${{ inputs.infracost-api-key }}
