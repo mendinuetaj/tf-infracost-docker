@@ -1,11 +1,6 @@
 name: 'Infracost action'
 description: 'Echoing the first input action'
 
-inputs:
-  terraform-root-dir:
-    description: 'Directory where all terraform code resides'
-    required: true
-
 outputs:
   cost:
     description: 'Infracost estimation'

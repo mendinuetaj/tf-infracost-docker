@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "terraform dir: $1"
-cost=$(infracost breakdown --path "$1" --format json)
+echo "terraform dir: $TERRAFORM_ROOT_DIR"
+cost=$(infracost breakdown --path "$TERRAFORM_ROOT_DIR" --format json)
 echo "cost=$cost" >>"$GITHUB_OUTPUT"
