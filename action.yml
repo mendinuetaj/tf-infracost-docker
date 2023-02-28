@@ -19,4 +19,4 @@ runs:
   image: 'Dockerfile'
   args:
     - -v ${{ inputs.terraform-root-dir }}:/code/:ro
-    - --env INFRACOST_API_KEY=${{ inputs.infracost-api-key }}
+    - -e INFRACOST_API_KEY=${{ inputs.infracost-api-key }}
