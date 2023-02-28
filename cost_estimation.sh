@@ -1,5 +1,5 @@
 #!/bin/bash
-find /code
-cost=$(infracost breakdown --path /code/ --format json)
+find ./
+cost=$(infracost breakdown --path ./ --format json)
 cost=$(echo "$cost" | jq -Rsa .)
 echo "cost=$cost" >>"$GITHUB_OUTPUT"
