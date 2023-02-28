@@ -1,6 +1,15 @@
 name: 'Infracost action'
 description: 'Echoing the first input action'
 
+inputs:
+  terraform-root-dir:
+    description: 'Directory where all terraform code resides'
+    required: true
+
+  infracost-api-key:
+    description: 'Infracost API key'
+    required: true
+
 outputs:
   cost:
     description: 'Infracost estimation'
@@ -8,3 +17,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - -v ${{ inputs.terraform-root-dir }}:/code/:ro
+    - --env INFRACOST_API_KEY=${{ inputs.infracost-api-key }}
