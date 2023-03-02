@@ -11,4 +11,6 @@ rm -rf ./src/terraform/.infracosts
 #  --pull-request="$PR_NUMBER" \
 #  --github-token="$PERSONAL_TOKEN" \
 #  --behavior=update
+echo "disruptor dir deleted !!"
+find ./src/terraform/
 exit $?
