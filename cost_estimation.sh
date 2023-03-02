@@ -7,5 +7,5 @@ infracost comment github --path=/tmp/infracost.json \
   --pull-request="$PR_NUMBER" \
   --github-token="$PERSONAL_TOKEN" \
   --behavior=update
-rm -rf .infracosts
+rm -rf .infracost
 exit $?
