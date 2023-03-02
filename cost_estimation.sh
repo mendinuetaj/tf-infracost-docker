@@ -2,7 +2,7 @@
 echo "user:  $USER"
 echo "workspace: $GITHUB_WORKSPACE"
 cd "$GITHUB_WORKSPACE" || exit 1
-rm -rf ./src/terraform/.infracosts
+rm -rf ./src/terraform/.infracosts 2>&1
 #cd "$TERRAFORM_ROOT_DIR" || exit 1
 #infracost breakdown --path . --format json --out-file /tmp/infracost.json
 #infracost comment github --path=/tmp/infracost.json \
